@@ -1,0 +1,23 @@
+case_id: C11
+lang: en
+input: input.txt
+channel: social
+product_id: DEMOBREW-INSTANT
+description: Clean coffee caption
+expected_overall: PASS
+expected_claims:
+- text: Made from 100% Robusta beans grown in Vietnam
+  expected_match: APPROVED
+  expected_claim_id: DB-001
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+- text: Rich, bold taste
+  expected_match: APPROVED
+  expected_claim_id: DB-002
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+non_claim_text: []

@@ -1,0 +1,27 @@
+case_id: C02
+lang: vi
+input: input.png
+channel: pack
+product_id: DEMOMALT-POWDER
+description: 'Pack front: one approved claim + an outcome claim about intelligence'
+expected_overall: BLOCK
+expected_claims:
+- text: Nguồn vitamin B hỗ trợ giải phóng năng lượng bình thường
+  expected_match: APPROVED
+  expected_claim_id: DM-001
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+- text: Giúp bé thông minh vượt trội
+  expected_match: NOT_IN_LIBRARY
+  expected_claim_id: null
+  expected_reg: REG_RISK
+  expected_reg_tags:
+  - health_function
+  - child_targeted
+  expected_final: REG_RISK
+  why: Outcome claim ('exceptionally smart') for children; DM-003 only allows 'contributes to normal cognitive
+    function'.
+non_claim_text:
+- FICTIONAL TEST FIXTURE · Claims Guard demo

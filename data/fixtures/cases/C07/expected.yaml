@@ -1,0 +1,31 @@
+case_id: C07
+lang: en
+input: input.txt
+channel: tv
+product_id: DEMOMALT-RTD
+description: TVC script with a 'cures' claim
+expected_overall: BLOCK
+expected_claims:
+- text: DemoMalt cures tiredness
+  expected_match: NOT_IN_LIBRARY
+  expected_claim_id: null
+  expected_reg: REG_RISK
+  expected_reg_tags:
+  - medical_claim
+  expected_final: REG_RISK
+  why: Food presented as curing/treating a condition.
+- text: Made with malted barley
+  expected_match: APPROVED
+  expected_claim_id: DM-004
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+- text: Enjoy as part of a balanced diet and an active lifestyle
+  expected_match: APPROVED
+  expected_claim_id: DM-006
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+non_claim_text: []

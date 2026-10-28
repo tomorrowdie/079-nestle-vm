@@ -1,0 +1,26 @@
+case_id: C10
+lang: vi
+input: input.txt
+channel: social
+product_id: DEMOMALT-POWDER
+description: Superlative claim that needs substantiation evidence
+expected_overall: REVIEW
+expected_claims:
+- text: Thức uống lúa mạch số 1 Việt Nam
+  expected_match: NOT_IN_LIBRARY
+  expected_claim_id: null
+  expected_reg: NEEDS_HUMAN
+  expected_reg_tags:
+  - comparative
+  - superlative
+  expected_final: NEEDS_HUMAN
+  why: '''Number 1 in Vietnam'' may be allowed only with valid, current market evidence. System cannot
+    decide without the evidence file.'
+- text: Ít đường hơn 25% so với công thức DemoMalt trước đây
+  expected_match: APPROVED
+  expected_claim_id: DM-005
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+non_claim_text: []

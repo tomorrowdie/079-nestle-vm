@@ -1,0 +1,26 @@
+case_id: C12
+lang: vi
+input: input.png
+channel: pack
+product_id: DEMOMALT-POWDER
+description: '''100% natural'' on a product with added sugar and flavour'
+expected_overall: REVIEW
+expected_claims:
+- text: 100% tự nhiên
+  expected_match: NOT_IN_LIBRARY
+  expected_claim_id: null
+  expected_reg: NEEDS_HUMAN
+  expected_reg_tags:
+  - natural_origin
+  expected_final: NEEDS_HUMAN
+  why: Product contains added sugar and flavouring per ingredient list; 'natural' claims need regulatory
+    review.
+- text: Ít đường hơn 25% so với công thức DemoMalt trước đây
+  expected_match: APPROVED
+  expected_claim_id: DM-005
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+non_claim_text:
+- FICTIONAL TEST FIXTURE · Claims Guard demo

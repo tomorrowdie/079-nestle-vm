@@ -1,0 +1,37 @@
+case_id: C08
+lang: vi
+input: input.png
+channel: social
+product_id: DEMOGROW-1
+description: Promotional post for infant formula 0-6 months
+expected_overall: BLOCK
+expected_claims:
+- text: Tốt như sữa mẹ
+  expected_match: NOT_IN_LIBRARY
+  expected_claim_id: null
+  expected_reg: REG_RISK
+  expected_reg_tags:
+  - infant_formula
+  - breast_milk_comparison
+  expected_final: REG_RISK
+  why: Compares infant formula with breast milk.
+- text: Giảm 20% khi mua 2 hộp
+  expected_match: NOT_IN_LIBRARY
+  expected_claim_id: null
+  expected_reg: REG_RISK
+  expected_reg_tags:
+  - infant_formula
+  - promotion
+  expected_final: REG_RISK
+  why: Price promotion on infant formula for under-6-months is a high-risk pattern.
+- text: Giúp bé tăng cân nhanh
+  expected_match: NOT_IN_LIBRARY
+  expected_claim_id: null
+  expected_reg: REG_RISK
+  expected_reg_tags:
+  - infant_formula
+  - health_function
+  expected_final: REG_RISK
+  why: Growth outcome claim for infants.
+non_claim_text:
+- FICTIONAL TEST FIXTURE · Claims Guard demo

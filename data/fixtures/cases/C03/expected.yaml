@@ -1,0 +1,33 @@
+case_id: C03
+lang: en
+input: input.png
+channel: ad
+product_id: DEMOMALT-POWDER
+description: 'Display ad: wrong sugar figure + immunity claim'
+expected_overall: BLOCK
+expected_claims:
+- text: 30% less sugar than the previous DemoMalt recipe
+  expected_match: VARIANT
+  expected_claim_id: DM-005
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: VARIANT
+  why: Library says 25%, ad says 30%.
+- text: Boosts your child's immunity
+  expected_match: NOT_IN_LIBRARY
+  expected_claim_id: null
+  expected_reg: REG_RISK
+  expected_reg_tags:
+  - health_function
+  - child_targeted
+  expected_final: REG_RISK
+  why: Immunity claim not approved; health-function claims on food are restricted.
+- text: Made with malted barley
+  expected_match: APPROVED
+  expected_claim_id: DM-004
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+non_claim_text:
+- FICTIONAL TEST FIXTURE · Claims Guard demo

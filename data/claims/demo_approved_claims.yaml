@@ -1,0 +1,117 @@
+library_id: DEMO-LIB-001
+status: FICTIONAL
+note: 'Fictional brands for testing only. Not Nestlé data. Vietnamese wording machine-drafted: TODO-VERIFY-VI.'
+products:
+- product_id: DEMOMALT-POWDER
+  brand: DemoMalt
+  type: malted chocolate drink powder
+  target: children 6-12 and family
+  nutrition_per_serving_nrv:
+    vitamin_b2: 18%
+    vitamin_b6: 16%
+    calcium: 8%
+    iron: 15%
+    protein: 6%
+- product_id: DEMOMALT-RTD
+  brand: DemoMalt
+  type: ready-to-drink malted milk 180ml
+  target: children 6-12
+  nutrition_per_serving_nrv:
+    vitamin_b2: 20%
+    calcium: 20%
+    iron: 15%
+    protein: 12%
+- product_id: DEMOGROW-1
+  brand: DemoGrow
+  type: infant formula, 0-6 months
+  target: infants under 6 months
+  note: Category with strict advertising restrictions. No promotional claims are approved for this product.
+- product_id: DEMOBREW-INSTANT
+  brand: DemoBrew
+  type: instant coffee 3-in-1
+  target: adults
+claims:
+- claim_id: DM-001
+  product_ids:
+  - DEMOMALT-POWDER
+  - DEMOMALT-RTD
+  text_en: Source of vitamin B to support normal energy release
+  text_vi: Nguồn vitamin B hỗ trợ giải phóng năng lượng bình thường
+  conditions: Vitamin B2 or B6 >= 15% NRV per serving
+  allowed_channels:
+  - pack
+  - tv
+  - social
+- claim_id: DM-002
+  product_ids:
+  - DEMOMALT-RTD
+  text_en: Contains calcium for normal bone development
+  text_vi: Chứa canxi hỗ trợ phát triển xương bình thường
+  conditions: Calcium >= 15% NRV per serving. NOT approved for DEMOMALT-POWDER (8% NRV).
+  allowed_channels:
+  - pack
+  - tv
+  - social
+- claim_id: DM-003
+  product_ids:
+  - DEMOMALT-POWDER
+  - DEMOMALT-RTD
+  text_en: With iron, which contributes to normal cognitive function
+  text_vi: Có sắt, góp phần vào chức năng nhận thức bình thường
+  conditions: Iron >= 15% NRV per serving. Do not rephrase as 'smarter', 'more intelligent' or any outcome
+    claim.
+  allowed_channels:
+  - pack
+  - social
+- claim_id: DM-004
+  product_ids:
+  - DEMOMALT-POWDER
+  - DEMOMALT-RTD
+  text_en: Made with malted barley
+  text_vi: Được làm từ lúa mạch nảy mầm
+  conditions: null
+  allowed_channels:
+  - pack
+  - tv
+  - social
+- claim_id: DM-005
+  product_ids:
+  - DEMOMALT-POWDER
+  text_en: 25% less sugar than the previous DemoMalt recipe
+  text_vi: Ít đường hơn 25% so với công thức DemoMalt trước đây
+  conditions: Exact figure 25%. Reference product must always be named.
+  allowed_channels:
+  - pack
+  - tv
+  - social
+- claim_id: DM-006
+  product_ids:
+  - DEMOMALT-POWDER
+  - DEMOMALT-RTD
+  text_en: Enjoy as part of a balanced diet and an active lifestyle
+  text_vi: Dùng như một phần của chế độ ăn cân bằng và lối sống năng động
+  conditions: Recommended on all child-targeted social posts.
+  allowed_channels:
+  - pack
+  - tv
+  - social
+- claim_id: DB-001
+  product_ids:
+  - DEMOBREW-INSTANT
+  text_en: Made from 100% Robusta beans grown in Vietnam
+  text_vi: Làm từ 100% hạt Robusta trồng tại Việt Nam
+  conditions: Coffee component only.
+  allowed_channels:
+  - pack
+  - tv
+  - social
+- claim_id: DB-002
+  product_ids:
+  - DEMOBREW-INSTANT
+  text_en: Rich, bold taste
+  text_vi: Hương vị đậm đà
+  conditions: Taste descriptor, no substantiation needed.
+  allowed_channels:
+  - pack
+  - tv
+  - social

@@ -1,0 +1,25 @@
+case_id: C06
+lang: vi
+input: input.png
+channel: pack
+product_id: DEMOMALT-POWDER
+description: Pack with approved wording but condition not met (calcium 8% NRV)
+expected_overall: REVIEW
+expected_claims:
+- text: Chứa canxi hỗ trợ phát triển xương bình thường
+  expected_match: VARIANT
+  expected_claim_id: DM-002
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: VARIANT
+  why: 'Wording matches DM-002, but DM-002 is not approved for the powder: nutrition panel shows calcium
+    8% NRV, condition needs >=15%.'
+- text: Được làm từ lúa mạch nảy mầm
+  expected_match: APPROVED
+  expected_claim_id: DM-004
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+non_claim_text:
+- FICTIONAL TEST FIXTURE · Claims Guard demo

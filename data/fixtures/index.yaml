@@ -1,0 +1,73 @@
+cases:
+- case_id: C01
+  lang: en
+  input: cases/C01/input.txt
+  channel: social
+  expected_overall: PASS
+  description: Clean social caption, all wording approved
+- case_id: C02
+  lang: vi
+  input: cases/C02/input.png
+  channel: pack
+  expected_overall: BLOCK
+  description: 'Pack front: one approved claim + an outcome claim about intelligence'
+- case_id: C03
+  lang: en
+  input: cases/C03/input.png
+  channel: ad
+  expected_overall: BLOCK
+  description: 'Display ad: wrong sugar figure + immunity claim'
+- case_id: C04
+  lang: vi
+  input: cases/C04/input.txt
+  channel: social
+  expected_overall: BLOCK
+  description: Facebook caption with medical endorsement
+- case_id: C05
+  lang: en
+  input: cases/C05/input.png
+  channel: social
+  expected_overall: BLOCK
+  description: Social post citing a research institute + height outcome (research-endorsement trap)
+- case_id: C06
+  lang: vi
+  input: cases/C06/input.png
+  channel: pack
+  expected_overall: REVIEW
+  description: Pack with approved wording but condition not met (calcium 8% NRV)
+- case_id: C07
+  lang: en
+  input: cases/C07/input.txt
+  channel: tv
+  expected_overall: BLOCK
+  description: TVC script with a 'cures' claim
+- case_id: C08
+  lang: vi
+  input: cases/C08/input.png
+  channel: social
+  expected_overall: BLOCK
+  description: Promotional post for infant formula 0-6 months
+- case_id: C09
+  lang: en
+  input: cases/C09/input.png
+  channel: ad
+  expected_overall: BLOCK
+  description: Coffee ad with an absolute safety claim
+- case_id: C10
+  lang: vi
+  input: cases/C10/input.txt
+  channel: social
+  expected_overall: REVIEW
+  description: Superlative claim that needs substantiation evidence
+- case_id: C11
+  lang: en
+  input: cases/C11/input.txt
+  channel: social
+  expected_overall: PASS
+  description: Clean coffee caption
+- case_id: C12
+  lang: vi
+  input: cases/C12/input.png
+  channel: pack
+  expected_overall: REVIEW
+  description: '''100% natural'' on a product with added sugar and flavour'

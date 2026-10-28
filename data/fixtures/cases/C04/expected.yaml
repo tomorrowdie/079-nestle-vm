@@ -1,0 +1,25 @@
+case_id: C04
+lang: vi
+input: input.txt
+channel: social
+product_id: DEMOMALT-RTD
+description: Facebook caption with medical endorsement
+expected_overall: BLOCK
+expected_claims:
+- text: Bác sĩ dinh dưỡng khuyên dùng
+  expected_match: NOT_IN_LIBRARY
+  expected_claim_id: null
+  expected_reg: REG_RISK
+  expected_reg_tags:
+  - endorsement
+  - medical_professional
+  expected_final: REG_RISK
+  why: Use of doctors/health professionals to endorse food in advertising is a high-risk pattern.
+- text: Có sắt, góp phần vào chức năng nhận thức bình thường
+  expected_match: APPROVED
+  expected_claim_id: DM-003
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+non_claim_text: []

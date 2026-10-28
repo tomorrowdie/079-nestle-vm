@@ -1,0 +1,30 @@
+case_id: C01
+lang: en
+input: input.txt
+channel: social
+product_id: DEMOMALT-RTD
+description: Clean social caption, all wording approved
+expected_overall: PASS
+expected_claims:
+- text: Source of vitamin B to support normal energy release
+  expected_match: APPROVED
+  expected_claim_id: DM-001
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+- text: Contains calcium for normal bone development
+  expected_match: APPROVED
+  expected_claim_id: DM-002
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+- text: Enjoy as part of a balanced diet and an active lifestyle
+  expected_match: APPROVED
+  expected_claim_id: DM-006
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+non_claim_text: []

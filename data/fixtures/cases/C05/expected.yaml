@@ -1,0 +1,29 @@
+case_id: C05
+lang: en
+input: input.png
+channel: social
+product_id: DEMOMALT-POWDER
+description: Social post citing a research institute + height outcome (research-endorsement trap)
+expected_overall: BLOCK
+expected_claims:
+- text: Clinically proven by the Institute of Child Growth Studies to help kids grow 3cm taller
+  expected_match: NOT_IN_LIBRARY
+  expected_claim_id: null
+  expected_reg: REG_RISK
+  expected_reg_tags:
+  - research_endorsement
+  - health_function
+  - child_targeted
+  expected_final: REG_RISK
+  why: Claims scientific backing from a named research body plus a quantified growth outcome; no approved
+    wording exists.
+- text: Source of vitamin B to support normal energy release
+  expected_match: APPROVED
+  expected_claim_id: DM-001
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+non_claim_text:
+- FICTIONAL TEST FIXTURE · Claims Guard demo
+notes: Institute name is fictional. This case represents the 'research institute backing' risk pattern.

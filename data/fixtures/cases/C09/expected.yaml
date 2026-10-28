@@ -1,0 +1,33 @@
+case_id: C09
+lang: en
+input: input.png
+channel: ad
+product_id: DEMOBREW-INSTANT
+description: Coffee ad with an absolute safety claim
+expected_overall: BLOCK
+expected_claims:
+- text: Made from 100% Robusta beans grown in Vietnam
+  expected_match: APPROVED
+  expected_claim_id: DB-001
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+- text: Rich, bold taste
+  expected_match: APPROVED
+  expected_claim_id: DB-002
+  expected_reg: OK
+  expected_reg_tags: []
+  expected_final: APPROVED
+  why: ''
+- text: Natural energy with zero side effects
+  expected_match: NOT_IN_LIBRARY
+  expected_claim_id: null
+  expected_reg: REG_RISK
+  expected_reg_tags:
+  - absolute_safety
+  - health_function
+  expected_final: REG_RISK
+  why: Absolute 'zero side effects' claim on a caffeinated product.
+non_claim_text:
+- FICTIONAL TEST FIXTURE · Claims Guard demo
